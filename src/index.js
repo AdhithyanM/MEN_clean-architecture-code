@@ -1,6 +1,12 @@
+/*
+  - Entry point to our entire microservice is this index.js file under src folder.
+  - Here we use express framework to communicate over HTTP.
+ */
+
 import express from 'express'
 import bodyParser from 'body-parser'
 import dotenv from 'dotenv'
+// Controllers import.
 import {
   deleteComment,
   getComments,
@@ -8,6 +14,7 @@ import {
   postComment,
   patchComment
 } from './controllers'
+// Callback method which acts as an adapter between express and our controller.
 import makeCallback from './express-callback'
 
 dotenv.config()

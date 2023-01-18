@@ -1,3 +1,20 @@
+/*
+  - comments-db is just an object that exposes a bunch of database interactions.
+  - This protects us from direct dependency on our database from the rest of our code.
+  - The rest of the code doesn't know how to issue a MongoDB query to
+    - say find all comments.
+    - that is handled here.
+  - This is the only place that knows how to interact with the database.
+  - Even then we are injecting our database connection code makeDb.
+
+  - So in future if we want to connect to different mongo compatible database, we can do so without detaching this code.
+
+  - If we move away from mongoDB Style API, then this code would be affected.
+    - but that is okay since this code is completely isolated from our use-cases and entities (main business logic).
+
+  - This file is only concerned with how to write the code to retrieve and put the info in and out of the DB as required.
+ */
+
 import Id from '../Id'
 
 export default function makeCommentsDb ({ makeDb }) {

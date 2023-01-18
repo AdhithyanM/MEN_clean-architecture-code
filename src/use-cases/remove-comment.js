@@ -1,3 +1,8 @@
+/*
+  - when thinking of business rules that should be implemented for a particular use case,
+  - Always think about separation of concerns!!!
+ */
+
 import makeComment from '../comment'
 
 export default function makeRemoveComment ({ commentsDb }) {

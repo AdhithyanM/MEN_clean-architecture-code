@@ -1,3 +1,8 @@
+/*
+  - A factory function makeHandleModeration.
+  - We injecting 2 dependency namely isQuestionable, initiateReview.
+  - These adapters are injected from the green layer.
+*/
 export default function makeHandleModeration ({
   isQuestionable,
   initiateReview

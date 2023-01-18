@@ -1,3 +1,7 @@
+/*
+  - It setup the connection and make our commentsDB adapter. 
+ */
+
 import makeCommentsDb from './comments-db'
 import mongodb from 'mongodb'
 
